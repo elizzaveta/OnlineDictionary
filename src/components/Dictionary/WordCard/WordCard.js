@@ -3,26 +3,15 @@ import {useParams} from "react-router-dom";
 import GetWordDefinition from "../../../api/GetWordDefinition";
 import Player from "./Audio/Player";
 
-export default function WordCard(){
-    const {query} = useParams();
-    const [definition, setDefinition] = useState(null);
-
-    useEffect(()=>{
-        GetWordDefinition(query)
-            .then(response => setDefinition(response.data));
-    },[])
-
+export default function WordCard(props){
 
     return(
         <div>
-            {!definition
-                ? null
-                : <div>
-                    <h1>{definition[0].word}</h1>
-                    <h2>{definition[0].phonetic}</h2>
-                    <Player audio={definition[0].phonetics[0].audio}/>
-                </div>
-            }
+            <h1>{props.definition[0].word}</h1>
+            <h2>{props.definition[0].phonetic}</h2>
+            <Player audio={props.definition[0].phonetics[0].audio}/>
+            <p>{props.definition[0].meanings[0].partOfSpeech}</p>
+            <p>{props.definition[0].meanings[0].definitions[0].definition}</p>
         </div>
     )
 }

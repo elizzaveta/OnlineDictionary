@@ -44,7 +44,7 @@ function DesktopHeader(){
             <div className='container d-flex justify-content-between'>
                 <Link to='/' className='fs-4  text-decoration-none text-dark'>Art Museum</Link>
                 <div>
-                    <NavLink to="departments"  activeClassName="" className='fs-5 text-muted text-decoration-none'>Departments</NavLink>
+                    <NavLink to="departments" className='fs-5 text-muted text-decoration-none'>Departments</NavLink>
                 </div>
             </div>
         </header>
