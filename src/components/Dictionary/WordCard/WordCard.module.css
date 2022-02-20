@@ -1,0 +1,23 @@
+.wordCardWrapper{
+    border: solid 1px black;
+    padding: 60px 0 60px 60px;
+    height: 460px;
+    position: relative;
+}
+.wordWrapper{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+
+}
+.wordWrapper h1{
+    margin: 0 20px 0 0;
+}
+.phonetic{
+    color: gray;
+    margin-bottom: 20px;
+}
+.meaning{
+    position: absolute;
+    bottom: 60px;
+}

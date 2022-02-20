@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from "react";
-import SearchField from "./Search/SearchField";
+import SearchField from "../shared/Search/SearchField";
 import WordCard from "./WordCard/WordCard";
 import OtherMeanings from "./OtherMeanings/OtherMeanings";
 import {useParams} from "react-router-dom";

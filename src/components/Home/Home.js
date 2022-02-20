@@ -1,5 +1,5 @@
-import React, {useState} from "react";
-import SearchField from "../Dictionary/Search/SearchField";
+import React from "react";
+import SearchField from "../shared/Search/SearchField";
 
 export default function Home() {
 
