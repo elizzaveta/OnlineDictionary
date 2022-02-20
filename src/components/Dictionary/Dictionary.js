@@ -10,6 +10,7 @@ export default function Dictionary() {
     const [definition, setDefinition] = useState(null);
 
     useEffect(() => {
+
         GetWordDefinition(query)
             .then(response => setDefinition(response.data));
     }, [])
@@ -22,7 +23,7 @@ export default function Dictionary() {
                 null
                 : <div>
                     <WordCard definition={definition}/>
-                    <OtherMeanings meanings={definition[0].meanings}/>
+                    <OtherMeanings definitions={definition}/>
                 </div>
             }
 

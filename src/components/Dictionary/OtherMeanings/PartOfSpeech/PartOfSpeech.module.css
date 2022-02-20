@@ -1,0 +1,11 @@
+.wrapper{
+    display: grid;
+    grid-template-columns: 1fr 6fr;
+    background: aliceblue;
+    margin-bottom: 10px;
+    align-items: center;
+    padding: 10px;
+}
+
+.partOfSpeech{
+}

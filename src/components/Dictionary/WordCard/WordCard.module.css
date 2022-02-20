@@ -3,6 +3,7 @@
     padding: 60px 0 60px 60px;
     height: 460px;
     position: relative;
+    margin-bottom: 50px;
 }
 .wordWrapper{
     display: flex;

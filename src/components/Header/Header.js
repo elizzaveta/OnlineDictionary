@@ -42,9 +42,9 @@ function DesktopHeader(){
     return(
         <header className={"mb-3 font-proxima-nova sticky-top bg-white " + padding} >
             <div className='container d-flex justify-content-between'>
-                <Link to='/' className='fs-4  text-decoration-none text-dark'>Art Museum</Link>
+                <Link to='/' className='fs-4  text-decoration-none text-dark'>Online Dictionary</Link>
                 <div>
-                    <NavLink to="departments" className='fs-5 text-muted text-decoration-none'>Departments</NavLink>
+                    <NavLink to="/" className='fs-5 text-muted text-decoration-none'>Menu</NavLink>
                 </div>
             </div>
         </header>
