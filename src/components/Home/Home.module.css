@@ -1,0 +1,21 @@
+.wrapper{
+    padding-top: 70px;
+    background-image: url("../../images/2.jpg");
+    height: 600px;
+    background-size: cover;
+}
+.searchFieldWrapper{
+    background: rgba(255, 255, 255, 0.5);
+    padding: 20px;
+}
+
+
+.homeImage{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: auto;
+    opacity: 0.6;
+    z-index: -1;
+}

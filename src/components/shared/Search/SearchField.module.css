@@ -6,7 +6,7 @@
 }
 .searchInput:focus{
     border: none;
-    border-bottom: 1px solid #61dafb;
+    border-bottom: 1px solid #000000;
     outline: none;
 }
 .submitButton{

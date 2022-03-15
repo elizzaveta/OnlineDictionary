@@ -1,9 +1,13 @@
+.wrapper{
+    position: relative;
+    margin-bottom: 50px;
+}
 .wordCardWrapper{
     border: solid 1px black;
     padding: 60px 0 60px 60px;
     height: 460px;
-    position: relative;
-    margin-bottom: 50px;
+    width: 97%;
+    background: rgba(255, 255, 255, 0.75);
 }
 .wordWrapper{
     display: flex;
