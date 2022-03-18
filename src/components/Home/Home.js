@@ -7,7 +7,7 @@ export default function Home() {
 
     return (
         <div className={styles.wrapper}>
-            <div className={styles.searchFieldWrapper}>
+            <div className={'container ' + styles.searchFieldWrapper}>
                 <SearchField/>
             </div>
             {/*<img src={homeImage} className={styles.homeImage}/>*/}

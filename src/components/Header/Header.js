@@ -1,5 +1,6 @@
 import React, {useCallback, useEffect, useState} from "react";
 import {Link, NavLink} from "react-router-dom"
+import Menu from "./Menu/Menu";
 
 export default function Header(){
     const [isMobile, setIsMobile] = useState(false);
@@ -43,48 +44,7 @@ function DesktopHeader(){
         <header className={"mb-3 font-proxima-nova sticky-top bg-white " + padding} >
             <div className='container d-flex justify-content-between'>
                 <Link to='/' className='fs-4  text-decoration-none text-dark'>Online Dictionary</Link>
-                <div>
-                    <NavLink to="/" className='fs-5 text-muted text-decoration-none'>Menu</NavLink>
-                </div>
-            </div>
-        </header>
-    )
-}
-
-function MobileHeader(){
-    const [IfMenuOn, setIfMenuOn] = useState(false)
-
-    let menu_details
-    let menu_shadow
-
-    const toggleMenu = () => {
-        setIfMenuOn(!IfMenuOn)
-    }
-
-    if(IfMenuOn){
-        menu_details = <div className="menu-details">
-            <nav className="links-in-menu">
-                <Link to="/blog" className="link-router link-dark" onClick={toggleMenu}>Blog</Link>
-                <Link to="/subscription" className="link-router link-dark" onClick={toggleMenu}>Subscription</Link>
-                <Link to="/about-us" className="link-router link-dark" onClick={toggleMenu}>About us</Link>
-            </nav>
-        </div>
-        menu_shadow = <div className="menu-shadow" onClick={()=>setIfMenuOn(!IfMenuOn)}>
-
-        </div>
-    }
-
-    return(
-        <header>
-            <div className="h-wrapper">
-                <div className="left">
-                    <div className="logo"/>
-                    <Link to="/" className="company-name link-router link-blue" onClick={()=>setIfMenuOn(false)}>SLH gym</Link>
-                </div>
-
-                <div className="menu" onClick={()=>setIfMenuOn(!IfMenuOn)}>---</div>
-                {menu_details}
-                {menu_shadow}
+                <Menu/>
             </div>
         </header>
     )

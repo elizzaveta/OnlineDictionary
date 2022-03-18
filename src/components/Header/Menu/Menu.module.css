@@ -1,0 +1,33 @@
+.wrapper{
+    position: relative;
+}
+.menu{
+    position: absolute;
+    top: 100%;
+    right: 35%;
+    background: #f0eef9;
+    padding: 20px;
+    border-radius: 10px;
+}
+.menu p{
+    padding: 2px 10px;
+    border-bottom: solid 1px white;
+    margin: 10px 0;
+    color: black;
+}
+.menu > *{
+    text-decoration: none;
+}
+.arrowUp{
+    width: 0;
+    height: 0;
+    bottom: 0;
+    position: absolute;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-bottom: 7px solid #f0eef9;
+}
+
+.clickable:hover{
+    cursor: pointer;
+}

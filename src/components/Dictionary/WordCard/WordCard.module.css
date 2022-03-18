@@ -4,7 +4,7 @@
 }
 .wordCardWrapper{
     border: solid 1px black;
-    padding: 60px 0 60px 60px;
+    padding: 60px 0 80px 80px;
     height: 460px;
     width: 97%;
     background: rgba(255, 255, 255, 0.75);
@@ -12,7 +12,7 @@
 .wordWrapper{
     display: flex;
     align-items: center;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 
 }
 .wordWrapper h1{
@@ -22,7 +22,11 @@
     color: gray;
     margin-bottom: 20px;
 }
-.meaning{
+.definition{
     position: absolute;
     bottom: 60px;
+    width: 90%;
+}
+.meaning{
+    color: #4d4545;
 }

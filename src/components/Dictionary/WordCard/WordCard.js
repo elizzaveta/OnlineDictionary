@@ -12,8 +12,10 @@ export default function WordCard(props){
                     <Player audio={props.definition[0].phonetics[0].audio}/>
                 </div>
                 <h3 className={styles.phonetic}>{props.definition[0].phonetic}</h3>
-                <p>{props.definition[0].meanings[0].partOfSpeech}</p>
-                <p className={styles.meaning}>{props.definition[0].meanings[0].definitions[0].definition}</p>
+                <div className={styles.definition}>
+                    <p>{props.definition[0].meanings[0].partOfSpeech}</p>
+                    <h5 className={styles.meaning}>{props.definition[0].meanings[0].definitions[0].definition}</h5>
+                </div>
             </div>
             <ShadowImage/>
         </div>

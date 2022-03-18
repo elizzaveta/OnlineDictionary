@@ -8,6 +8,7 @@ import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import Dictionary from "./components/Dictionary/Dictionary";
 import Home from "./components/Home/Home";
+import History from "./components/History/History";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Routes>
             <Route path='/' element={<Home/>}/>
             <Route path='/search/:query' element={<Dictionary/>}/>
+            <Route path='/history' element={<History/>}/>
         </Routes>
         <Footer/>
       </BrowserRouter>
