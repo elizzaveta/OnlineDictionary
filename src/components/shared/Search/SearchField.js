@@ -8,8 +8,22 @@ export default function SearchField() {
 
     const handleSubmit = function () {
         if(searchQuery!=null){
+            pushQueryToLocalStorage()
             nav(`/search/${searchQuery}`)
         }
+    }
+
+    const pushQueryToLocalStorage = function (){
+        let history = JSON.parse(localStorage.getItem('searchHistory'));
+
+        if(history == null ) history = [];
+        if(history.indexOf(searchQuery) !== -1){
+            history.splice(history.indexOf(searchQuery),1);
+        }
+        history.unshift(searchQuery);
+        if(history.length > 25) history.pop();
+
+        localStorage.setItem('searchHistory', JSON.stringify(history));
     }
 
     const handleChange = function (event) {

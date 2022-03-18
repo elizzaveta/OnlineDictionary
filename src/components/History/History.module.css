@@ -1,0 +1,28 @@
+.title{
+    text-align: center;
+    font-weight: lighter;
+}
+.message{
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f0eef973;
+}
+.historyWrapper > div{
+    background: #f0eef973;
+    margin-bottom: 3px;
+    padding: 5px 20px;
+    display: flex;
+    justify-content: space-between;
+}
+.word:hover{
+    cursor: pointer;
+}
+.word{
+    text-decoration: none;
+    color: black;
+}
+.word h5{
+    margin: 0;
+}
