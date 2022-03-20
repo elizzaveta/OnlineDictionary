@@ -2,9 +2,9 @@ import React from "react";
 
 export default function Footer() {
     return (
-        <footer className="page-footer font-small pt-5 mt-5">
+        <footer className="container page-footer font-small pt-5 mt-5">
 
-            <div className="container text-center pt-5 text-md-left">
+            <div className="text-center pt-5 text-md-left">
 
                 <div className="row">
 

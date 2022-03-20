@@ -1,6 +1,7 @@
 import {useEffect, useState} from "react";
 import styles from "./History.module.css"
 import {Link} from "react-router-dom";
+import crossIcon from "../../images/icons/cross.svg"
 
 export default function History() {
     const [searchHistory, setSearchHistory] = useState(null)
@@ -9,6 +10,12 @@ export default function History() {
         setSearchHistory(JSON.parse(localStorage.getItem('searchHistory')));
     }, [])
 
+    const deleteSearchQuery = (e) => {
+        const targetQuery = e.target.id;
+        const updatedSearchHistory = searchHistory.filter((query)=> query !== targetQuery);
+        setSearchHistory(updatedSearchHistory);
+        localStorage.setItem('searchHistory', JSON.stringify(updatedSearchHistory));
+    }
 
     return (
         <div className={"container"}>
@@ -16,9 +23,9 @@ export default function History() {
             {searchHistory
                 ? <div className={styles.historyWrapper}>{
                     searchHistory.map(searchQuery =>
-                        <div>
+                        <div id={searchQuery + "_div"}>
                             <Link to={'/search/'+searchQuery} className={styles.word}><h5>{searchQuery}</h5></Link>
-                            <i className="fa-solid fa-xmark"/>
+                            <img id={searchQuery} className={styles.cross} src={crossIcon} onClick={deleteSearchQuery} alt="Delete"/>
                         </div>
                     )
                 }</div>
