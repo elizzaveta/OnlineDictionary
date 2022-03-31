@@ -1,0 +1,16 @@
+.wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.button{
+    margin: 0 5px;
+    background: rgba(255, 255, 255, 0.44);
+    border-radius: 12px;
+    border: solid 1px rgba(0, 0, 0, 0.49);
+    padding: 0 10px;
+}
+.title{
+    color: #9a9a9a;
+    margin-right: 10px;
+}
