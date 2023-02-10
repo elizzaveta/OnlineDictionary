@@ -2,6 +2,7 @@ import Home from "../components/Home/Home";
 import Dictionary from "../components/Dictionary/Dictionary";
 import History from "../components/History/History";
 import About from "../components/About/About";
+import NotFound from "../components/NotFound/NotFound";
 
 export const appRoutes = [
     {
@@ -19,5 +20,9 @@ export const appRoutes = [
     {
         path: 'about',
         component: <About/>
+    },
+    {
+        path: "*",
+        component: <NotFound/>
     }
 ]
