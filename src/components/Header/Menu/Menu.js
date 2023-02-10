@@ -16,7 +16,9 @@ export default function Menu() {
                         <Link to="/history" className={styles.clickable} onClick={() => setIfMenuOn(!IfMenuOn)}>
                             <p>History</p>
                         </Link>
-                        <p className={styles.clickable}>About</p>
+                        <Link to="/about" className={styles.clickable} onClick={() => setIfMenuOn(!IfMenuOn)}>
+                            <p className={styles.clickable}>About</p>
+                        </Link>
                         <p className={styles.clickable}>Contact</p>
                     </div>
                 </div>
