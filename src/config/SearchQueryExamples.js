@@ -1,0 +1,1 @@
+export const searchQueryExamples = ['yoga', 'excitement', 'compass']
