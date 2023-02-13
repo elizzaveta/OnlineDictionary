@@ -1,3 +1,12 @@
 .searchFieldWrapper{
     background: rgba(211, 211, 211, 0.17);
 }
+.resultWrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+.notFoundWrapper{
+    text-align: center;
+    color: #ff3d3d;
+}
