@@ -1,5 +1,5 @@
 import React from "react";
-import SearchField from "../../components/shared/Search/SearchField";
+import SearchField from "../../components/SearchField";
 import styles from "../../styles/css/Home.module.css"
 import SearchQueryExamples from "./SearchQueryExamples";
 

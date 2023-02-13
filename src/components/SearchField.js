@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import {useNavigate} from "react-router-dom";
-import styles from "../../../styles/css/SearchField.module.css"
-import {pushToSearchHistory} from "../../../localStorage";
+import styles from "../styles/css/SearchField.module.css"
+import {pushToSearchHistory} from "../localStorage";
 
 export default function SearchField() {
     const [searchQuery, setSearchQuery] = useState(null);

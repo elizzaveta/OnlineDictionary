@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from "react";
-import SearchField from "../shared/Search/SearchField";
+import SearchField from "../SearchField";
 import WordCard from "./WordCard/WordCard";
 import OtherMeanings from "./OtherMeanings/OtherMeanings";
 import {useParams} from "react-router-dom";
@@ -11,14 +11,13 @@ export default function Dictionary() {
     const [definition, setDefinition] = useState(null);
 
     useEffect(() => {
-
         GetWordDefinition(query)
             .then(response => setDefinition(response.data));
     }, [])
 
 
     return (
-        <div className='container'>
+        <div>
             <SearchField/>
             {!definition ?
                 null

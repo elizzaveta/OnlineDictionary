@@ -1,7 +1,6 @@
 import React, {useCallback, useEffect, useState} from "react";
 import {Link} from "react-router-dom"
-import Menu from "./Menu/Menu";
-import styles from "../../styles/css/Menu.module.css";
+import styles from "../styles/css/Menu.module.css";
 
 export default function Header(){
     const [isMobile, setIsMobile] = useState(false);
@@ -11,26 +10,19 @@ export default function Header(){
 }
 
 function DesktopHeader(){
-    const [y,
-        setY] = useState(document.scrollingElement.scrollHeight);
-    const [scrollDirection,
-        setScrollDirection] = useState("you have not scrolled yet");
+    const [y, setY] = useState(document.scrollingElement.scrollHeight);
     const [backgroundColor, setBackgroundColor] = useState("py-3")
 
-    const handleNavigation = useCallback((e) => {
-        if (y > window.scrollY) {
-            setScrollDirection("Scrolling Up");
+    const handleNavigation = useCallback(() => {
+        if (y > window.scrollY && window.scrollY < 100) {
             setBackgroundColor("")
-            console.log("scrolling up");
-        } else if (y < window.scrollY) {
+        } else {
             setBackgroundColor("bg-white")
-            console.log("scrolling down");
         }
         setY(window.scrollY)
     }, [y]);
 
     useEffect(() => {
-
         window.addEventListener("scroll", handleNavigation);
 
         return () => {

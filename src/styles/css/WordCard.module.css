@@ -1,32 +1,20 @@
 .wrapper{
-    position: relative;
-    margin-bottom: 50px;
-}
-.wordCardWrapper{
     border: solid 1px black;
     border-radius: 20px;
-    padding: 60px 0 80px 80px;
-    height: 460px;
-    width: 97%;
-    background: rgba(255, 255, 255, 0.44);
+    background: rgba(255, 255, 255, 0.5);
+    display: flex;
+    flex-direction: column;
+    gap: 70px;
+    padding: 20px;
 }
 .wordWrapper{
     display: flex;
     align-items: center;
-    margin-bottom: 10px;
-
-}
-.wordWrapper h1{
-    margin: 0 20px 0 0;
+    gap: 20px
 }
 .phonetic{
     color: gray;
     margin-bottom: 20px;
-}
-.definition{
-    position: absolute;
-    bottom: 60px;
-    width: 90%;
 }
 .meaning{
     color: #4d4545;
