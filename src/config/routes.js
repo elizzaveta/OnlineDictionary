@@ -1,8 +1,8 @@
 import Home from "../components/Home/Home";
 import Dictionary from "../components/Dictionary/Dictionary";
-import History from "../components/History/History";
-import About from "../components/About/About";
-import NotFound from "../components/NotFound/NotFound";
+import History from "../pages/History/History";
+import About from "../pages/About/About";
+import NotFound from "../pages/NotFound/NotFound";
 
 export const appRoutes = [
     {
