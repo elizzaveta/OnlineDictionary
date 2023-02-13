@@ -7,6 +7,9 @@
 .wrapper p{
     margin: 0;
 }
-.wrapper h2{
+.wrapper h4{
     margin: 5px 0;
+}
+.wrapper h2{
+    margin-bottom: 15px;
 }
