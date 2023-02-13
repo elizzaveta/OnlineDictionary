@@ -4,7 +4,7 @@ import WordCard from "./WordCard/WordCard";
 import OtherMeanings from "./OtherMeanings/OtherMeanings";
 import {useParams} from "react-router-dom";
 import GetWordDefinition from "../../api/GetWordDefinition";
-import styles from "./Dictionary.module.css"
+import styles from "../../styles/css/Dictionary.module.css"
 
 export default function Dictionary() {
     const {query} = useParams();

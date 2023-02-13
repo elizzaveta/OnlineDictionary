@@ -20,10 +20,10 @@ const About = () => {
             <p>This page is created with React.js with use of css modules.</p>
             <br/>
             <h2>API</h2>
-            <p>Dictionary information is taken from <a href="todo">Dictionary API</a>.</p>
+            <p>Dictionary information is taken from <a href="https://dictionaryapi.dev/" target="_blank">Dictionary API</a>.</p>
             <br/>
             <h2>Source Code</h2>
-            <p>Source code of this page can be found at <a href="https://github.com/elizzaveta/OnlineDictionary">GitHub</a>.</p>
+            <p>Source code of this page can be found at <a href="https://github.com/elizzaveta/OnlineDictionary" target="_blank">GitHub</a>.</p>
         </div>
     );
 };

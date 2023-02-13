@@ -1,7 +1,6 @@
 import React from "react";
 import Player from "./Audio/Player";
-import styles from "./WordCard.module.css"
-import ShadowImage from "./ShaddowImage/ShadowImage";
+import styles from "../../../styles/css/WordCard.module.css"
 
 export default function WordCard(props){
     return(
@@ -17,7 +16,7 @@ export default function WordCard(props){
                     <h5 className={styles.meaning}>{props.definition[0].meanings[0].definitions[0].definition}</h5>
                 </div>
             </div>
-            <ShadowImage/>
+            {/*<ShadowImage/>*/}
         </div>
     )
 }

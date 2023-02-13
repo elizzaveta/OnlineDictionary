@@ -1,6 +1,6 @@
 import React from "react";
 import SearchField from "../shared/Search/SearchField";
-import styles from "./Home.module.css"
+import styles from "../../styles/css/Home.module.css"
 import SearchQueryExamples from "./SearchQueryExamples/SearchQueryExamples";
 
 export default function Home() {
@@ -12,7 +12,6 @@ export default function Home() {
                 <SearchField/>
                 <SearchQueryExamples/>
             </div>
-            {/*<img src={homeImage} className={styles.homeImage}/>*/}
         </div>
     )
 }

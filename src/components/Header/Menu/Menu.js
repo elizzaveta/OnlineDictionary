@@ -1,6 +1,6 @@
 import {Link} from "react-router-dom";
 import {useState} from "react";
-import styles from "./Menu.module.css"
+import styles from "../../../styles/css/Menu.module.css"
 
 export default function Menu() {
     const [IfMenuOn, setIfMenuOn] = useState(false)

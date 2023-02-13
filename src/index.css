@@ -12,6 +12,13 @@ code {
     monospace;
 }
 
+body {
+  background-image: url("images/gradient.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 @media (min-width: 1600px) {
   main{
     padding: 10px 400px;

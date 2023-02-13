@@ -1,5 +1,5 @@
 import {useEffect, useState} from "react";
-import styles from "./History.module.css"
+import styles from "../../styles/css/History.module.css"
 import {Link} from "react-router-dom";
 import crossIcon from "../../images/icons/cross.svg"
 

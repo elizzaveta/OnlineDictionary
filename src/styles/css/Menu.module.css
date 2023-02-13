@@ -31,3 +31,12 @@
 .clickable{
     cursor: pointer;
 }
+.linksWrapper{
+    display: flex;
+    gap: 20px;
+}
+.linksWrapper a{
+    text-decoration: none;
+    color: black;
+
+}

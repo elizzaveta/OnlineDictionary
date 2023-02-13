@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import {useNavigate} from "react-router-dom";
-import styles from "./SearchField.module.css"
+import styles from "../../../styles/css/SearchField.module.css"
 
 export default function SearchField() {
     const [searchQuery, setSearchQuery] = useState(null);
