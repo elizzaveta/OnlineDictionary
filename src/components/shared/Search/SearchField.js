@@ -1,37 +1,24 @@
 import React, {useState} from "react";
 import {useNavigate} from "react-router-dom";
 import styles from "../../../styles/css/SearchField.module.css"
+import {pushToSearchHistory} from "../../../localStorage";
 
 export default function SearchField() {
     const [searchQuery, setSearchQuery] = useState(null);
-    const nav = useNavigate();
+    const navigation = useNavigate();
 
-    const handleSubmit = function () {
+    const handleSubmit = () =>{
         if(searchQuery!=null){
-            pushQueryToLocalStorage()
-            nav(`/search/${searchQuery}`)
+            pushToSearchHistory(searchQuery)
+            navigation(`/search/${searchQuery}`)
         }
     }
-
-    const pushQueryToLocalStorage = function (){
-        let history = JSON.parse(localStorage.getItem('searchHistory'));
-
-        if(history == null ) history = [];
-        if(history.indexOf(searchQuery) !== -1){
-            history.splice(history.indexOf(searchQuery),1);
-        }
-        history.unshift(searchQuery);
-        if(history.length > 25) history.pop();
-
-        localStorage.setItem('searchHistory', JSON.stringify(history));
-    }
-
     const handleChange = function (event) {
         setSearchQuery(event.target.value);
     }
 
     return (
-        <div className='container'>
+        <div className={styles.wrapper}>
             <h5 className={styles.title}>Type a word to find it's meaning:</h5>
             <form className={styles.searchWrapper} onSubmit={handleSubmit}>
                 <input className={styles.searchInput} type="text" onChange={handleChange}/>

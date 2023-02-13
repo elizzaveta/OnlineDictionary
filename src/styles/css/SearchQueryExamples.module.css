@@ -2,6 +2,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+.linksWrapper{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+
 }
 .button{
     margin: 0 5px;
@@ -13,4 +21,13 @@
 .title{
     color: #9a9a9a;
     margin-right: 10px;
+}
+@media (max-width: 700px) {
+    .linksWrapper{
+        flex-direction: column;
+        /*align-items: center;*/
+    }
+    .wrapper{
+        flex-direction: column;
+    }
 }

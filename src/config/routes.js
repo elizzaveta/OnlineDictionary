@@ -1,4 +1,4 @@
-import Home from "../components/Home/Home";
+import Home from "../pages/Home/Home";
 import Dictionary from "../components/Dictionary/Dictionary";
 import History from "../pages/History/History";
 import About from "../pages/About/About";
