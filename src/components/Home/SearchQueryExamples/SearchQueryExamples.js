@@ -1,6 +1,7 @@
 import React from "react";
 import {Link} from "react-router-dom";
 import styles from "../../../styles/css/SearchQueryExamples.module.css"
+import {searchQueryExamples} from "../../../config/SearchQueryExamples";
 
 export default function SearchQueryExamples() {
 
@@ -9,15 +10,11 @@ export default function SearchQueryExamples() {
         <div className={styles.wrapper}>
             <div className={styles.title}>Examples:</div>
             <div>
-                <Link to='/search/yoga'>
-                    <button className={styles.button}>yoga</button>
-                </Link>
-                <Link to='/search/excitement'>
-                    <button className={styles.button}>excitement</button>
-                </Link>
-                <Link to='/search/compass'>
-                    <button className={styles.button}>compass</button>
-                </Link>
+                {searchQueryExamples.map((searchQuery)=>
+                    <Link to={`/search/${searchQuery}`}>
+                        <button className={styles.button}>{searchQuery}</button>
+                    </Link>
+                )}
             </div>
         </div>
     )
