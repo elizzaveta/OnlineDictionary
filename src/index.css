@@ -21,29 +21,29 @@ body {
 }
 
 @media (min-width: 1600px) {
-  main{
+  main, header{
     padding: 10px 400px;
   }
 
 }
 @media (max-width: 1600px) {
-  main{
+  main, header{
     padding: 10px 300px;
   }
 
 }
 @media (max-width: 1200px) {
-  main{
+  main, header{
     padding: 10px 200px;
   }
 }
 @media (max-width: 900px) {
-  main{
+  main, header{
     padding: 10px 100px;
   }
 }
 @media (max-width: 600px) {
-  main{
+  main, header{
     padding: 10px 10px;
   }
 }

@@ -2,6 +2,9 @@ import React, {useCallback, useEffect, useState} from "react";
 import {Link} from "react-router-dom"
 import styles from "../styles/css/Menu.module.css";
 import {useSelector} from "react-redux";
+import {navigationLinks} from "../config/navigationLinks";
+import LinksContainer from "./LinksContainer";
+import Menu from "./Menu";
 
 export default function Header() {
     const isMobile = useSelector(state => state.mobileDisplay.isMobile);
@@ -21,10 +24,10 @@ export default function Header() {
 
     return (
         <header style={{transition: "background-color 0.3s ease-out"}}
-                className={"mb-3 font-proxima-nova sticky-top p-3 " + backgroundColor}>
+                className={"mb-3 font-proxima-nova sticky-top pt-3 " + backgroundColor}>
             {isMobile
-                ? <HeaderContainer menuComponent={<MobileMenu/>}/>
-                : <HeaderContainer menuComponent={<DesktopMenu/>}/>
+                ? <HeaderContainer menuComponent={<Menu/>}/>
+                : <HeaderContainer menuComponent={<LinksContainer links={navigationLinks.header}/>}/>
             }
         </header>
     )
@@ -34,27 +37,10 @@ const HeaderContainer = (props) => {
     const {menuComponent} = props;
 
     return (
-        <div className='container d-flex justify-content-between'>
+        <div className='d-flex justify-content-between'>
             <Link to='/' className='fs-4  text-decoration-none text-dark'>Online Dictionary</Link>
             {menuComponent}
         </div>
     )
 }
 
-const DesktopMenu = () => {
-    return (
-        <div className={styles.linksWrapper}>
-            <Link to="/about" className={styles.clickable}>
-                <p className={styles.clickable}>About</p>
-            </Link>
-            <Link to="/history" className={styles.clickable}>
-                <p>Search History</p>
-            </Link>
-        </div>
-    )
-}
-const MobileMenu = () => {
-    return (
-        <div>Menu</div>
-    )
-}
