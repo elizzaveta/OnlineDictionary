@@ -1,11 +1,11 @@
 import React, {useEffect, useState} from "react";
-import SearchField from "../SearchField";
+import SearchField from "../../components/SearchField";
 import WordCard from "./WordCard/WordCard";
 import OtherMeanings from "./OtherMeanings/OtherMeanings";
 import {useParams} from "react-router-dom";
 import GetWordDefinition from "../../api/GetWordDefinition";
 import styles from "../../styles/css/Dictionary.module.css"
-import CardTemplate from "../CardTemplate";
+import CardTemplate from "../../components/CardTemplate";
 
 export default function Dictionary() {
     const {query} = useParams();

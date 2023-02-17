@@ -1,5 +1,5 @@
 import Home from "../pages/Home/Home";
-import Dictionary from "../components/Dictionary/Dictionary";
+import Dictionary from "../pages/Dictionary/Dictionary";
 import History from "../pages/History/History";
 import About from "../pages/About/About";
 import NotFound from "../pages/NotFound/NotFound";
